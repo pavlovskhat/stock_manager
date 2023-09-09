@@ -1,0 +1,10 @@
+{% comment %} {% extends "index.html" %} {% endcomment %}
+{% block content %}
+<h3><a href="/blog/{{post.id}}">{{ post.title }}</a></h3>
+<h6> on {{ post.date }}</h6>
+<div class = "container">
+    {{ post.body|safe|linebreaks}}
+</div>
+<h6>{{ post.signature }}</h6>
+<br><br>
+{% endblock %}
